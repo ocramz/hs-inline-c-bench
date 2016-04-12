@@ -1,5 +1,4 @@
 {-# language QuasiQuotes, TemplateHaskell, OverloadedStrings #-}
-{-# language GeneralizedNewtypeDeriving #-}
 module Internal where
 
 -- import qualified Language.C.Inline         as C
@@ -10,10 +9,7 @@ import Data.Monoid
 import qualified Data.Map as Map
 import qualified Language.Haskell.TH       as TH
 
-import Foreign.Storable
-import Foreign.Ptr
-
-newtype QuT = Qut (Ptr QuT) deriving Storable
+import Types
 
 
 ctx :: Context
