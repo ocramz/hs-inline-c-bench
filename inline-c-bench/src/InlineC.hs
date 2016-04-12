@@ -1,16 +1,20 @@
 {-# LANGUAGE QuasiQuotes, TemplateHaskell #-}
 module InlineC where
 
-import Internal
-import qualified Language.C.Inline as C
+import Language.C.Inline as C
 
 import Data.Word (Word32)
 import Foreign.C.Types (CSize(..))
 
-C.context ctx
+import Internal
 
+-- | Haskell-C type map
+context ctx
+
+-- | include headers
 C.include "<test.h>"
 
 
+-- | functions
 queueInit' q buf sz =
-  [C.exp|void{queue_init($(qut q),$(Word32* buf),$(CSize sz))}|]
+  [C.exp|void{queue_init($(QuT q),$(Word32* buf),$(CSize sz))}|]
