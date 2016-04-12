@@ -18,7 +18,8 @@ library
   exposed-modules:     Lib
   build-depends:       base >= 4.7 && < 5,
                        containers,
-                       inline-c
+                       inline-c,
+                       template-haskell
   default-language:    Haskell2010
 
 executable inline-c-bench-exe
