@@ -1,0 +1,13 @@
+*.hi
+*.chi
+*.dyn
+*.o
+*.c
+*.h
+*.dyn_hi
+*.dyn_o
+.cabal-sandbox/
+.stack-work/
+cabal.config
+cabal.sandbox.config
+.hsenv
