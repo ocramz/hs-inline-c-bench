@@ -19,4 +19,7 @@ step2:
 	cc -c ${SRCDIR}/InlineC.c -o ${LIBDIR}/InlineC.o -I${CDIR}
 
 step3:
-	ghci ${SRCDIR}/Lib.hs ${SRCDIR}/InlineC.hs -L${LIBDIR}/InlineC.o -i${SRCDIR}/
+	ghci ${SRCDIR}/Lib.hs ${SRCDIR}/InlineC.hs ${SRCDIR}/Internal.hs -L${LIBDIR}/InlineC.o -L${LIBDIR}/Internal.o -L${LIBDIR}/Types.o -L${LIBDIR}/ -i${SRCDIR}/ # -ltest
+
+reload:
+	make step3

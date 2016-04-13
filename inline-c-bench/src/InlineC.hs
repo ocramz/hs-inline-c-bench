@@ -22,4 +22,4 @@ C.include "<test.h>"
 -- | functions
 
 queueInit' q buf sz =
-  [C.exp|void{queue_init($(QuT* q),$(Word32* buf),$(CSize sz))}|]
+  [C.exp|void{queue_init($(queue_t* q),$(unsigned int* buf),$(size_t sz))}|]
