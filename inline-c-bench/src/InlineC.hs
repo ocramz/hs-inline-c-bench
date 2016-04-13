@@ -23,3 +23,6 @@ C.include "<test.h>"
 
 queueInit' q buf sz =
   [C.exp|void{queue_init($(queue_t* q),$(unsigned int* buf),$(size_t sz))}|]
+
+queueFin' q =
+  [C.exp|void{queue_fin($(queue_t* q))}|]

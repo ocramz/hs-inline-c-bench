@@ -20,7 +20,7 @@ typedef struct queue_s {
 void queue_init(queue_t* const q, uint32_t* const buf, const size_t size);
 /* bool queue_put(qut const q); */
 
-void queue_clean(queue_t* q);
+void queue_fin(queue_t* q);
 
 
 #endif

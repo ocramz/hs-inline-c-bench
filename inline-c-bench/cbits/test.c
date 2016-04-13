@@ -19,7 +19,7 @@ void queue_init(queue_t* const q, uint32_t *const buf, const size_t size) {
   /* q->tail = q->head = &q->elements[0]; */
 }
 
-void queue_clean(queue_t* q) {
+void queue_fin(queue_t* q) {
   if (q){
     free(q);
     q = NULL;}
