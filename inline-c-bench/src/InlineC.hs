@@ -6,7 +6,7 @@ import Language.C.Inline as C
 -- import Data.Word (Word32)
 -- import Foreign.C.Types (CSize(..))
 
-import Internal
+import Internal (ctx, QuT)
 import Types
 
 
