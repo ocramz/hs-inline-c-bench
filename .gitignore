@@ -2,10 +2,10 @@
 *.chi
 *.dyn
 *.o
-*.c
-*.h
 *.dyn_hi
 *.dyn_o
+src/*.c
+src/*.h
 .cabal-sandbox/
 .stack-work/
 cabal.config
